@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    function Uczen(imie_u, nazwisko_u, wiek_u, oceny_u) {
+      this.imie = imie_u;
+      this.nazwisko = nazwisko_u;
+      this.wiek = wiek_u;
+      this.oceny = oceny_u;
+    }
+
+    Uczen.prototype.pokazDane = function () {
+      alert(this.imie + ' ' + this.nazwisko + ', Wiek: ' + this.wiek + ', Oceny: ' + this.oceny.join(', '));
+    };
+
+    Uczen.prototype.pokazNazwiskoUcznia = function () {
+      alert('Nazwisko ucznia: ' + this.nazwisko);
+    };
+
+    var uczen1 = new Uczen('Jan', 'Kowalski', 15, [4, 5, 3, 5]);
+    var uczen2 = new Uczen('Anna', 'Nowak', 16, [5, 4, 4, 3]);
+    var uczen3 = new Uczen('Piotr', 'Wiśniewski', 17, [3, 2, 4, 3]);
+
+    uczen1.pokazDane();
+    uczen2.pokazDane();
+    uczen3.pokazDane();
+
+    uczen1.pokazNazwiskoUcznia();
+    uczen2.pokazNazwiskoUcznia();
+    uczen3.pokazNazwiskoUcznia();
+  </script>
+</head>
+<body>
+  <br>
+  Programowanie obiektowe
+</body>
+</html>

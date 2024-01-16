@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+ <html>
+<head>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=utf-8">
+</head>
+<body>
+<textarea cols="85" rows="30">
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programowanie Obiektowe w JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Programowanie Obiektowe w JavaScript</h1>
+
+    <h2>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        Sposób 1:<br>
+        <code>obiekt.nazwa_właściwości = "tekst";</code> // np. <code>auto.marka = "Opel Omega";</code><br>
+        Sposób 2:<br>
+        <code>obiekt["nazwa_właściwości"];</code> // np. <code>auto["cena"] = 25000;</code>
+    </p>
+
+    <h2>2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        Do pól i metod można się odwołać używając notacji kropkowej, np.: <code>console.log(obiekt.pole);</code>
+    </p>
+
+    <h2>3. Wymień cechy charakterystyczne konstruktora.</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        - Jest wywoływany automatycznie przy tworzeniu obiektu danej klasy.<br>
+        - Ma taką samą nazwę jak klasa.<br>
+        - Nie zwraca żadnej wartości.<br>
+        - Może przyjmować argumenty, aby powołać do życia obiekt za pomocą operatora new.
+    </p>
+
+    <h2>4. Konstruowanie obiektu na podstawie przykładu (obiekt ma trzy pola oraz jedną metodę).</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        ```javascript
+        var osoba_1 = {
+            nazwisko: 'Kowalski',
+            imie: 'Jan',
+            zawod: 'piekarz',
+            wyświetl: function() {
+                document.write(this.nazwisko + ' ' + this.imie);
+            }
+        }
+        ```
+    </p>
+
+    <h2>5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        Słowo kluczowe <code>this</code> odnosi się do aktualnego obiektu. Pola i metody oddzielamy kropką, np.: <code>obiekt.pole</code> i <code>obiekt.metoda()</code>.
+    </p>
+
+    <h2>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        ```javascript
+        function Osoba(imie, nazwisko) {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+        }
+        var klient1 = new Osoba('Jan', 'Kowalski');
+        ```
+        Konstruktor <code>Osoba</code> tworzy obiekt o nazwie <code>klient1</code> z polami <code>imie</code> i <code>nazwisko</code>.
+    </p>
+
+    <h2>7. Znaczenie słowa kluczowego New wraz z przykładem.</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        Słowo kluczowe <code>new</code> służy do tworzenia nowego obiektu na podstawie konstruktora. Przykład:
+        ```javascript
+        var klient1 = new Osoba('Jan', 'Kowalski');
+        ```
+    </p>
+
+    <h2>8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.</h2>
+    <p>
+        <strong>Odpowiedź:</strong><br>
+        Słowo kluczowe <code>prototype</code> służy do definicji metod i właściwości dla obiektu. Przykład:
+        ```javascript
+        function Osoba(imie, nazwisko) {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+        }
+        Osoba.prototype.pokaz = function() {
+            console.log(this.imie + ' ' + this.nazwisko);
+        };
+        ```
+        W tym przykładzie metoda <code>p
+
+</textarea>
