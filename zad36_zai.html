@@ -1,0 +1,19 @@
+﻿<html>
+<body>
+<h1 style="color:green;">Menu</h1>
+<p style="color:red;" >1-czerwony</p>
+<p style="color:blue;" >2-niebieski</p>
+ 
+<input type="button" name="Zaikina" value="Oblicz" onclick="fun_zai()" />
+ <script>
+ function fun_zai() {
+ var x_zai = prompt("Podaj kolor", "");
+ if(x_zai == 1 || x_zai.toLowerCase() == "czerwony") {
+document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br>'); }
+ else if(x_zai == 2 || x_zai.toLowerCase() == "niebieski") {
+document.write('<h6 style="color:blue;">wczytałeś kolor niebieski</h6><br>');
+}
+}
+</script>
+</body>
+</html>
