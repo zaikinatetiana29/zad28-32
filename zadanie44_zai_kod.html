@@ -1,0 +1,36 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_Zaikina()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="Zaikina" cols="90" rows="30" disabled>
+<html>
+<body>
+<div style="color:red;font-size:41px;">
+ <script>
+        let ileRazyWyswietlic = 13;
+        let imie = "Tetiana";
+        let nazwisko = "Zaikina";
+        
+        for (let i = 0; i < ileRazyWyswietlic; i++) {
+            if (i % 2 == 0) {
+                document.write("<div class='name'>" + nazwisko + "</div>");
+            } else {
+                document.write("<div class='name'>" + imie + "</div>");
+            }
+        }
+    </script></div>
+</body>
+</html>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Zaikina()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

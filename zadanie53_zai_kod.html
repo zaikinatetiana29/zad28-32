@@ -1,0 +1,54 @@
+<html>
+<head>
+ <script type="text/javascript">
+ function okno_zamknij_Zaikina()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+ <form>
+ <textarea name="Zaikina" cols="90" rows="30" disabled>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var a_zai = prompt("Podaj szerokość prostokąta a:");
+            var b_zai = prompt("Podaj wysokość prostokąta b:");
+
+            var gwiazdki_g = "*";
+            for (var i = 1; i < a_zai; i++) {
+                gwiazdki_g += "*";
+            }
+
+            var gwiazdki_sr = "*";
+            for (var i = 1; i < a_zai - 1; i++) {
+                gwiazdki_sr += "&nbsp;&nbsp;";
+            }
+            gwiazdki_sr += "*";
+
+            var gwiazdki_d = "*";
+            for (var i = 1; i < a_zai; i++) {
+                gwiazdki_d += "*";
+            }
+
+            document.write(gwiazdki_g + "<br>");
+
+            for (var i = 1; i < b_zai - 1; i++) {
+                document.write(gwiazdki_sr + "<br>");
+            }
+
+            document.write(gwiazdki_d + "<br>");
+
+        </script>
+    </body>
+</html></form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Zaikina()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>

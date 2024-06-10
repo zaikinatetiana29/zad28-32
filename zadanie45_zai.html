@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tetiana Zaikina</title>
+</head>
+<body>
+<div>
+ <script language="JavaScript">
+    var x = prompt("podaj liczbę x=", "");
+    var a = parseInt(x);
+    var ileRazyWyswietlic = (7 % 4) + 10; // 13
+    var wielkoscLiter = (7 % 3) + 40; // 41px
+    
+    if (a % 2 == 0) {
+        for (var i = 0; i < ileRazyWyswietlic; i++) {
+            document.write("<p style=\"color:blue; font-size:" + wielkoscLiter + "px\">Zaikina</p>");
+        }
+    } else {
+        for (var i = 0; i < ileRazyWyswietlic; i++) {
+            document.write("<p style=\"color:green; font-size:" + wielkoscLiter + "px\">Tetiana</p>");
+        }
+    }
+ </script>
+</div>
+</body>
+</html>

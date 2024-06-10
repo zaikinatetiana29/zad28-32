@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parzyste liczby</title>
+</head>
+<body>
+<div id="output" style="white-space: pre-line; font-family: monospace;"></div>
+<script>
+    function printEvenNumbers(limit) {
+        let output = "Liczby parzyste od 2 do " + limit + ":\n";
+        for (let i = 2; i <= limit; i += 2) {
+            output += i + "\n";
+        }
+        document.getElementById("output").innerText = output;
+    }
+
+    const input = prompt("Podaj liczbę:", "10");
+    const limit = parseInt(input, 10);
+    if (!isNaN(limit) && limit >= 2) {
+        printEvenNumbers(limit);
+    } else {
+        alert("Proszę podać prawidłową liczbę większą lub równą 2.");
+    }
+</script>
+</body>
+</html>

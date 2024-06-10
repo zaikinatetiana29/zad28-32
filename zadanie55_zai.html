@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekst z regulowaną wielkością</title>
+</head>
+<body>
+<div id="output" style="white-space: pre-line; font-family: monospace;"></div>
+<script>
+    function validateNumber(num) {
+        return num >= 20 && num <= 60;
+    }
+
+    function adjustTextSize(l1_t_zai, l2_t_zai, pocz_zai, tekst_zai) {
+        let output = "";
+        let step = (l1_t_zai < l2_t_zai) ? 5 : -5;
+        let size = pocz_zai;
+
+        while ((step > 0 && size <= 100) || (step < 0 && size > 0)) {
+            output += "<p style=\"font-size:" + size + "px; color: black;\"><br>" + tekst_zai + "<br></p>";
+            size += step;
+        }
+
+        document.getElementById("output").innerHTML = output;
+    }
+
+    let l1_t_zai = parseInt(prompt("Podaj pierwszą liczbę z przedziału <20,60>:", ""), 10);
+    if (!validateNumber(l1_t_zai)) {
+        alert("Liczba l1 nie należy do przedziału <20,60>.");
+        throw new Error("Liczba l1 nie należy do przedziału <20,60>.");
+    }
+
+    let l2_t_zai = parseInt(prompt("Podaj drugą liczbę z przedziału <20,60>:", ""), 10);
+    if (!validateNumber(l2_t_zai)) {
+        alert("Liczba l2 nie należy do przedziału <20,60>.");
+        throw new Error("Liczba l2 nie należy do przedziału <20,60>.");
+    }
+
+    let pocz_zai = parseInt(prompt("Podaj wartość początkową wielkości tekstu:", ""), 10);
+    if (isNaN(pocz_zai)) {
+        alert("Podano nieprawidłową wartość początkową wielkości tekstu.");
+        throw new Error("Podano nieprawidłową wartość początkową wielkości tekstu.");
+    }
+
+    let tekst_zai = prompt("Podaj dowolny tekst:", "");
+    if (!tekst_zai) {
+        alert("Nie podano tekstu.");
+        throw new Error("Nie podano tekstu.");
+    }
+
+    adjustTextSize(l1_t_zai, l2_t_zai, pocz_zai, tekst_zai);
+</script>
+</div>
+</body>
+</html>

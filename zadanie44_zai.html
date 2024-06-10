@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetiana Zaikina</title>
+    <style>
+        .name {
+            font-size: 41px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let ileRazyWyswietlic = 13;
+        let imie = "Tetiana";
+        let nazwisko = "Zaikina";
+        
+        for (let i = 0; i < ileRazyWyswietlic; i++) {
+            if (i % 2 == 0) {
+                document.write("<div class='name'>" + nazwisko + "</div>");
+            } else {
+                document.write("<div class='name'>" + imie + "</div>");
+            }
+        }
+    </script>
+</body>
+</html>

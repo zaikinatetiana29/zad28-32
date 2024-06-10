@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierwiastki</title>
+</head>
+<body>
+<div id="output" style="white-space: pre-line; font-family: monospace;"></div>
+<script>
+    function calculateRoots(startNumber) {
+        const linesToShow = 3;
+        const totalNumbers = 16;
+        let output = "";
+        
+        for (let i = 0; i < totalNumbers; i++) {
+            let num = startNumber + i;
+            let sqrt2 = Math.sqrt(num).toFixed(2);
+            let sqrt4 = Math.sqrt(Math.sqrt(num)).toFixed(2);
+            output += `I=${num} pierw_2(${num})=${sqrt2} pierw_4(${num})=${sqrt4}\n`;
+            
+            if ((i + 1) % linesToShow === 0) {
+                output += "............................................................\n";
+                if (!confirm("Aby kontynuować, naciśnij OK")) {
+                    break;
+                }
+            }
+        }
+        document.getElementById("output").innerText = output;
+    }
+    
+    const startNumber = parseInt(prompt("Podaj numer w dzienniku:", "1"), 10);
+    if (!isNaN(startNumber)) {
+        calculateRoots(startNumber);
+    } else {
+        alert("Proszę podać prawidłowy numer.");
+    }
+</script>
+</body>
+</html>
